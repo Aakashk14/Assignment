@@ -3,9 +3,11 @@ const fs = require('fs')
 const csv2json = require('csvtojson')
 var config = JSON.parse(process.env.APP_CONFIG);
 
-// mongoose.connect("mongodb://localhost:27017/data-assignment",{autoIndex:true})
-var mongoPassword="aakash14"
-mongoose.connect("mongodb://"+config.mongo.user+":"+encodeURIComponent("aakash14")+"@"+config.mongo.hostString,{autoIndex:true})
+ mongoose.connect("mongodb://localhost:27017/data-assignment",{autoIndex:true})
+
+// for evennode
+// var mongoPassword=""
+// mongoose.connect("mongodb://"+config.mongo.user+":"+encodeURIComponent("aakash14")+"@"+config.mongo.hostString,{autoIndex:true})
 
 
 
