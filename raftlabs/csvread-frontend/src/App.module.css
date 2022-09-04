@@ -1,0 +1,75 @@
+.App{
+  position: absolute;
+  left:200px;
+  top:100px;
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+}
+.container input[type=text]{
+
+  border: 0;
+  border-bottom: 1px solid gray;
+}
+.search button[data=active]{
+  background-color: lightblue;
+}
+.data{
+  height:500px;
+  position: absolute;
+  top:100px;
+  overflow: auto;
+}
+.data table{
+  table-layout: fixed;
+  width:1000px;
+  
+}
+.data table thead{
+  position: sticky;
+  top:0;
+  z-index: 10;
+  background-color: #bbbbbb;
+}
+.data table tbody{
+ position: relative;
+ top:20px;
+}
+
+
+.data table tr th:nth-child(3){
+  width:300px;
+}
+.data table tr{
+  text-align: center;
+}
+.data table tr td{
+  border: 1px solid gray;
+}
+
+.data table tr td:first-child{
+  color: blue;
+}
+.search{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.selection{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.search button{
+  background-color: white;
+  border-radius: 4px;
+  font-family: 'inter';
+}
+.searchBar{
+  display: flex;
+  flex-direction: row;
+  gap:10px;
+  position: relative;
+  top:20px;
+}
