@@ -2,7 +2,6 @@ const express = require('express')
 const router = express.Router()
 const db = require("./Database/data_query")
 const {Worker}= require('worker_threads')
-const sortdata = require("./sort")
 const {data,authors} =require("./Database/main_model")
 const fs =require('fs')
 
@@ -13,7 +12,7 @@ router.get("/api/data",async(req,res)=>{
     res.send(result)
 })
 
-router.get("/api/data/sort",async(req,res)=>{
+router.get("/api/data/",async(req,res)=>{
 
     
     let workerone = new Worker('./sort.js')
