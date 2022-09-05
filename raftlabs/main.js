@@ -14,10 +14,12 @@ router.get("/api/data",async(req,res)=>{
 })
 
 router.get("/api/data/sort",async(req,res)=>{
-    let result = await db.getData()
 
-    let sortedData = await sortdata(result.data)
-    res.send(sortedData)
+    
+    let workerone = new Worker('./sort.js')
+    workerone.on("message",(data)=>{
+        res.send(data.data)
+    })
 })
 
 router.post("/api/data/add",async(req,res)=>{
